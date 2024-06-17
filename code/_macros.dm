@@ -45,3 +45,7 @@
 #define PIXEL_MULTIPLIER WORLD_ICON_SIZE/32 //Needed for the R-UST port
 
 #define JOINTEXT(X) jointext(X, null)
+
+// Needed for Holocalling, taken from Citadel RP Code
+#define STACK_TRACE(msg) try { CRASH("trace: [msg]"); } catch(var/exception/___E) {___rethrow_exception(___E); };
+/proc/___rethrow_exception(exception/E)
